@@ -1,0 +1,339 @@
+{\rtf1\ansi\ansicpg1250\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!doctype html>\
+<html lang="pl">\
+<head>\
+  <meta charset="utf-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1" />\
+  <title>ZAG Ksi\uc0\u281 gi - renowacja i digitalizacja ksi\u261 g</title>\
+  <meta name="description" content="Renowacja, oprawa i digitalizacja starych ksi\uc0\u261 g oraz dokument\'f3w. Skanowanie, OCR, archiwizacja i zabezpieczanie materia\u322 \'f3w historycznych." />\
+  <style>\
+    :root \{\
+      --bg: #f7f3ec;\
+      --paper: #fffaf2;\
+      --text: #26221c;\
+      --muted: #6d6256;\
+      --accent: #4b3520;\
+      --accent-2: #9a7a4f;\
+      --line: #e6dccd;\
+    \}\
+\
+    * \{ box-sizing: border-box; \}\
+    html \{ scroll-behavior: smooth; \}\
+    body \{\
+      margin: 0;\
+      font-family: Arial, Helvetica, sans-serif;\
+      color: var(--text);\
+      background: var(--bg);\
+      line-height: 1.6;\
+    \}\
+\
+    a \{ color: inherit; text-decoration: none; \}\
+    .container \{ width: min(1120px, calc(100% - 40px)); margin: 0 auto; \}\
+\
+    header \{\
+      position: sticky;\
+      top: 0;\
+      z-index: 10;\
+      background: rgba(247, 243, 236, 0.94);\
+      border-bottom: 1px solid var(--line);\
+      backdrop-filter: blur(10px);\
+    \}\
+\
+    .nav \{\
+      display: flex;\
+      align-items: center;\
+      justify-content: space-between;\
+      padding: 18px 0;\
+      gap: 20px;\
+    \}\
+\
+    .logo \{\
+      font-weight: 700;\
+      letter-spacing: 0.03em;\
+      font-size: 20px;\
+    \}\
+\
+    .menu \{\
+      display: flex;\
+      gap: 24px;\
+      font-size: 15px;\
+      color: var(--muted);\
+    \}\
+\
+    .button \{\
+      display: inline-flex;\
+      align-items: center;\
+      justify-content: center;\
+      padding: 12px 20px;\
+      border-radius: 999px;\
+      background: var(--accent);\
+      color: #fff;\
+      font-weight: 700;\
+      border: 1px solid var(--accent);\
+      transition: 0.2s ease;\
+    \}\
+\
+    .button:hover \{ transform: translateY(-1px); opacity: 0.92; \}\
+    .button.secondary \{ background: transparent; color: var(--accent); \}\
+\
+    .hero \{\
+      padding: 78px 0 42px;\
+    \}\
+\
+    .hero-grid \{\
+      display: grid;\
+      grid-template-columns: 1.1fr 0.9fr;\
+      gap: 44px;\
+      align-items: center;\
+    \}\
+\
+    h1 \{\
+      font-family: Georgia, 'Times New Roman', serif;\
+      font-size: clamp(44px, 7vw, 82px);\
+      line-height: 0.98;\
+      letter-spacing: -0.04em;\
+      margin: 0 0 24px;\
+    \}\
+\
+    .lead \{\
+      font-size: 20px;\
+      color: var(--muted);\
+      max-width: 640px;\
+      margin: 0 0 28px;\
+    \}\
+\
+    .hero-actions \{ display: flex; gap: 14px; flex-wrap: wrap; \}\
+\
+    .hero-card \{\
+      background: var(--paper);\
+      border: 1px solid var(--line);\
+      border-radius: 28px;\
+      padding: 18px;\
+      box-shadow: 0 18px 50px rgba(75, 53, 32, 0.12);\
+    \}\
+\
+    .hero-card img \{\
+      width: 100%;\
+      height: 430px;\
+      object-fit: cover;\
+      border-radius: 20px;\
+      display: block;\
+      filter: saturate(0.88) contrast(1.02);\
+    \}\
+\
+    .note \{\
+      margin-top: 14px;\
+      color: var(--muted);\
+      font-size: 14px;\
+    \}\
+\
+    section \{ padding: 70px 0; \}\
+    .section-title \{\
+      font-family: Georgia, 'Times New Roman', serif;\
+      font-size: clamp(32px, 4vw, 52px);\
+      line-height: 1.05;\
+      margin: 0 0 18px;\
+      letter-spacing: -0.03em;\
+    \}\
+    .section-intro \{ color: var(--muted); max-width: 760px; font-size: 18px; margin: 0 0 34px; \}\
+\
+    .cards \{\
+      display: grid;\
+      grid-template-columns: repeat(3, 1fr);\
+      gap: 18px;\
+    \}\
+\
+    .card \{\
+      background: var(--paper);\
+      border: 1px solid var(--line);\
+      border-radius: 24px;\
+      padding: 26px;\
+      min-height: 230px;\
+    \}\
+\
+    .card h3 \{ margin: 0 0 12px; font-size: 22px; \}\
+    .card p \{ margin: 0; color: var(--muted); \}\
+\
+    .split \{\
+      display: grid;\
+      grid-template-columns: 0.9fr 1.1fr;\
+      gap: 36px;\
+      align-items: start;\
+    \}\
+\
+    .about-box \{\
+      background: var(--paper);\
+      border: 1px solid var(--line);\
+      border-radius: 28px;\
+      padding: 34px;\
+    \}\
+\
+    .list \{\
+      display: grid;\
+      gap: 14px;\
+      margin: 0;\
+      padding: 0;\
+      list-style: none;\
+    \}\
+    .list li \{\
+      background: rgba(255,255,255,0.45);\
+      border: 1px solid var(--line);\
+      border-radius: 16px;\
+      padding: 14px 16px;\
+    \}\
+\
+    .process \{\
+      display: grid;\
+      grid-template-columns: repeat(5, 1fr);\
+      gap: 12px;\
+    \}\
+    .step \{\
+      border-top: 2px solid var(--accent-2);\
+      padding-top: 16px;\
+      color: var(--muted);\
+    \}\
+    .step strong \{ display: block; color: var(--text); margin-bottom: 6px; \}\
+\
+    .contact \{\
+      background: var(--accent);\
+      color: #fff;\
+      border-radius: 34px;\
+      padding: 42px;\
+      display: grid;\
+      grid-template-columns: 1fr 1fr;\
+      gap: 28px;\
+      align-items: center;\
+    \}\
+    .contact p \{ color: rgba(255,255,255,0.78); \}\
+    .contact .button \{ background: #fff; color: var(--accent); border-color: #fff; \}\
+\
+    footer \{\
+      padding: 34px 0;\
+      color: var(--muted);\
+      font-size: 14px;\
+    \}\
+\
+    @media (max-width: 860px) \{\
+      .menu \{ display: none; \}\
+      .hero-grid, .split, .contact \{ grid-template-columns: 1fr; \}\
+      .cards \{ grid-template-columns: 1fr; \}\
+      .process \{ grid-template-columns: 1fr; \}\
+      .hero-card img \{ height: 320px; \}\
+      section \{ padding: 48px 0; \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <header>\
+    <div class="container nav">\
+      <a class="logo" href="#top">ZAG Ksi\uc0\u281 gi</a>\
+      <nav class="menu" aria-label="Nawigacja">\
+        <a href="#uslugi">Us\uc0\u322 ugi</a>\
+        <a href="#onas">O nas</a>\
+        <a href="#proces">Proces</a>\
+        <a href="#kontakt">Kontakt</a>\
+      </nav>\
+      <a class="button secondary" href="#kontakt">Popro\uc0\u347  o wycen\u281 </a>\
+    </div>\
+  </header>\
+\
+  <main id="top">\
+    <section class="hero">\
+      <div class="container hero-grid">\
+        <div>\
+          <h1>Renowacja i digitalizacja starych ksi\uc0\u261 g i dokument\'f3w</h1>\
+          <p class="lead">Oprawa, konserwacja, skanowanie, OCR i archiwizacja dokument\'f3w z zachowaniem bezpiecze\uc0\u324 stwa materia\u322 \'f3w historycznych.</p>\
+          <div class="hero-actions">\
+            <a class="button" href="#kontakt">Popro\uc0\u347  o wycen\u281 </a>\
+            <a class="button secondary" href="#uslugi">Zobacz us\uc0\u322 ugi</a>\
+          </div>\
+        </div>\
+        <div class="hero-card">\
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80" alt="Stare ksi\uc0\u261 \u380 ki i ksi\u281 gi" />\
+          <div class="note">Praca z ksi\uc0\u281 gami, kronikami, aktami i dokumentami wymagaj\u261 cymi ostro\u380 nego obchodzenia si\u281 .</div>\
+        </div>\
+      </div>\
+    </section>\
+\
+    <section id="uslugi">\
+      <div class="container">\
+        <h2 class="section-title">Us\uc0\u322 ugi</h2>\
+        <p class="section-intro">\uc0\u321 \u261 czymy tradycyjn\u261  introligatorni\u281  z nowoczesn\u261  digitalizacj\u261 . Dzi\u281 ki temu dokument mo\u380 na najpierw odpowiednio przygotowa\u263 , a nast\u281 pnie bezpiecznie przenie\u347 \u263  do formy cyfrowej.</p>\
+        <div class="cards">\
+          <article class="card">\
+            <h3>Renowacja i oprawa ksi\uc0\u261 g</h3>\
+            <p>Naprawa, zabezpieczanie i oprawa ksi\uc0\u261 g, kronik, rejestr\'f3w oraz dokument\'f3w wymagaj\u261 cych ostro\u380 nej pracy.</p>\
+          </article>\
+          <article class="card">\
+            <h3>Digitalizacja dokument\'f3w</h3>\
+            <p>Skanowanie ksi\uc0\u261 g, akt i materia\u322 \'f3w archiwalnych oraz przygotowanie uporz\u261 dkowanych kopii cyfrowych.</p>\
+          </article>\
+          <article class="card">\
+            <h3>OCR i archiwizacja</h3>\
+            <p>Tworzenie plik\'f3w PDF z mo\uc0\u380 liwo\u347 ci\u261  wyszukiwania tekstu oraz logiczn\u261  struktur\u261  folder\'f3w i nazw plik\'f3w.</p>\
+          </article>\
+        </div>\
+      </div>\
+    </section>\
+\
+    <section id="onas">\
+      <div class="container split">\
+        <div>\
+          <h2 class="section-title">O nas</h2>\
+          <p class="section-intro">Zajmujemy si\uc0\u281  renowacj\u261 , opraw\u261  i digitalizacj\u261  ksi\u261 g oraz dokument\'f3w archiwalnych.</p>\
+        </div>\
+        <div class="about-box">\
+          <p>\uc0\u321 \u261 czymy tradycyjne rzemios\u322 o introligatorskie z nowoczesnymi metodami skanowania i archiwizacji cyfrowej. Pracujemy ze starymi i cz\u281 sto delikatnymi materia\u322 ami, dlatego szczeg\'f3ln\u261  uwag\u281  zwracamy na bezpiecze\u324 stwo dokument\'f3w na ka\u380 dym etapie pracy.</p>\
+          <p>Naszym celem jest zabezpieczenie dokumentu oraz stworzenie jego trwa\uc0\u322 ej, cyfrowej wersji do dalszego wykorzystania.</p>\
+          <ul class="list">\
+            <li>Ostro\uc0\u380 na praca ze starymi ksi\u281 gami i aktami</li>\
+            <li>Mo\uc0\u380 liwo\u347 \u263  przygotowania dokument\'f3w przed skanowaniem</li>\
+            <li>Porz\uc0\u261 dkowanie plik\'f3w i archiwum cyfrowego</li>\
+          </ul>\
+        </div>\
+      </div>\
+    </section>\
+\
+    <section id="proces">\
+      <div class="container">\
+        <h2 class="section-title">Jak wygl\uc0\u261 da wsp\'f3\u322 praca</h2>\
+        <div class="process">\
+          <div class="step"><strong>1. Kontakt</strong>Opisujesz rodzaj i ilo\uc0\u347 \u263  dokument\'f3w.</div>\
+          <div class="step"><strong>2. Ocena</strong>Sprawdzamy stan ksi\uc0\u261 g, akt lub dokument\'f3w.</div>\
+          <div class="step"><strong>3. Wycena</strong>Ustalamy zakres, termin i spos\'f3b przekazania.</div>\
+          <div class="step"><strong>4. Realizacja</strong>Renowacja, przygotowanie, skanowanie lub OCR.</div>\
+          <div class="step"><strong>5. Odbi\'f3r</strong>Przekazujemy dokumenty i pliki cyfrowe.</div>\
+        </div>\
+      </div>\
+    </section>\
+\
+    <section id="kontakt">\
+      <div class="container">\
+        <div class="contact">\
+          <div>\
+            <h2 class="section-title">Zapytaj o wycen\uc0\u281 </h2>\
+            <p>Napisz, jakie dokumenty chcesz zabezpieczy\uc0\u263  lub zdigitalizowa\u263 . Wystarczy orientacyjna liczba ksi\u261 g, segregator\'f3w albo stron.</p>\
+          </div>\
+          <div>\
+            <p><strong>Telefon:</strong> wpisz numer telefonu</p>\
+            <p><strong>E-mail:</strong> wpisz adres e-mail</p>\
+            <p><strong>Lokalizacja:</strong> Lublin / woj. lubelskie</p>\
+            <a class="button" href="mailto:kontakt@zagksiegi.pl?subject=Zapytanie%20o%20wycen%C4%99">Wy\uc0\u347 lij e-mail</a>\
+          </div>\
+        </div>\
+      </div>\
+    </section>\
+  </main>\
+\
+  <footer>\
+    <div class="container">\'a9 ZAG Ksi\uc0\u281 gi. Renowacja, oprawa i digitalizacja ksi\u261 g oraz dokument\'f3w.</div>\
+  </footer>\
+</body>\
+</html>\
+}
