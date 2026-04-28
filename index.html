@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZAG Księgi - renowacja i digitalizacja ksiąg</title>
+  <meta name="description" content="Renowacja, oprawa i digitalizacja starych ksiąg oraz dokumentów. Skanowanie, OCR, archiwizacja i zabezpieczanie materiałów historycznych." />
+  <style>
+    :root {
+      --bg: #f7f3ec;
+      --paper: #fffaf2;
+      --text: #26221c;
+      --muted: #6d6256;
+      --accent: #4b3520;
+      --accent-2: #9a7a4f;
+      --line: #e6dccd;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 243, 236, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 20px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 24px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      border: 1px solid var(--accent);
+      transition: 0.2s ease;
+    }
+
+    .button:hover { transform: translateY(-1px); opacity: 0.92; }
+    .button.secondary { background: transparent; color: var(--accent); }
+
+    .hero {
+      padding: 78px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      margin: 0 0 24px;
+    }
+
+    .lead {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 0 28px;
+    }
+
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .hero-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 18px;
+      box-shadow: 0 18px 50px rgba(75, 53, 32, 0.12);
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+      filter: saturate(0.88) contrast(1.02);
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section { padding: 70px 0; }
+    .section-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      letter-spacing: -0.03em;
+    }
+    .section-intro { color: var(--muted); max-width: 760px; font-size: 18px; margin: 0 0 34px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+      min-height: 230px;
+    }
+
+    .card h3 { margin: 0 0 12px; font-size: 22px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .about-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+    }
+
+    .list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .list li {
+      background: rgba(255,255,255,0.45);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .step {
+      border-top: 2px solid var(--accent-2);
+      padding-top: 16px;
+      color: var(--muted);
+    }
+    .step strong { display: block; color: var(--text); margin-bottom: 6px; }
+
+    .contact {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 34px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .contact p { color: rgba(255,255,255,0.78); }
+    .contact .button { background: #fff; color: var(--accent); border-color: #fff; }
+
+    footer {
+      padding: 34px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .menu { display: none; }
+      .hero-grid, .split, .contact { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .process { grid-template-columns: 1fr; }
+      .hero-card img { height: 320px; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#top">ZAG Księgi</a>
+      <nav class="menu" aria-label="Nawigacja">
+        <a href="#uslugi">Usługi</a>
+        <a href="#onas">O nas</a>
+        <a href="#proces">Proces</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="button secondary" href="#kontakt">Poproś o wycenę</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Renowacja i digitalizacja starych ksiąg i dokumentów</h1>
+          <p class="lead">Oprawa, konserwacja, skanowanie, OCR i archiwizacja dokumentów z zachowaniem bezpieczeństwa materiałów historycznych.</p>
+          <div class="hero-actions">
+            <a class="button" href="#kontakt">Poproś o wycenę</a>
+            <a class="button secondary" href="#uslugi">Zobacz usługi</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80" alt="Stare książki i księgi" />
+          <div class="note">Praca z księgami, kronikami, aktami i dokumentami wymagającymi ostrożnego obchodzenia się.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="uslugi">
+      <div class="container">
+        <h2 class="section-title">Usługi</h2>
+        <p class="section-intro">Łączymy tradycyjną introligatornię z nowoczesną digitalizacją. Dzięki temu dokument można najpierw odpowiednio przygotować, a następnie bezpiecznie przenieść do formy cyfrowej.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Renowacja i oprawa ksiąg</h3>
+            <p>Naprawa, zabezpieczanie i oprawa ksiąg, kronik, rejestrów oraz dokumentów wymagających ostrożnej pracy.</p>
+          </article>
+          <article class="card">
+            <h3>Digitalizacja dokumentów</h3>
+            <p>Skanowanie ksiąg, akt i materiałów archiwalnych oraz przygotowanie uporządkowanych kopii cyfrowych.</p>
+          </article>
+          <article class="card">
+            <h3>OCR i archiwizacja</h3>
+            <p>Tworzenie plików PDF z możliwością wyszukiwania tekstu oraz logiczną strukturą folderów i nazw plików.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="onas">
+      <div class="container split">
+        <div>
+          <h2 class="section-title">O nas</h2>
+          <p class="section-intro">Zajmujemy się renowacją, oprawą i digitalizacją ksiąg oraz dokumentów archiwalnych.</p>
+        </div>
+        <div class="about-box">
+          <p>Łączymy tradycyjne rzemiosło introligatorskie z nowoczesnymi metodami skanowania i archiwizacji cyfrowej. Pracujemy ze starymi i często delikatnymi materiałami, dlatego szczególną uwagę zwracamy na bezpieczeństwo dokumentów na każdym etapie pracy.</p>
+          <p>Naszym celem jest zabezpieczenie dokumentu oraz stworzenie jego trwałej, cyfrowej wersji do dalszego wykorzystania.</p>
+          <ul class="list">
+            <li>Ostrożna praca ze starymi księgami i aktami</li>
+            <li>Możliwość przygotowania dokumentów przed skanowaniem</li>
+            <li>Porządkowanie plików i archiwum cyfrowego</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proces">
+      <div class="container">
+        <h2 class="section-title">Jak wygląda współpraca</h2>
+        <div class="process">
+          <div class="step"><strong>1. Kontakt</strong>Opisujesz rodzaj i ilość dokumentów.</div>
+          <div class="step"><strong>2. Ocena</strong>Sprawdzamy stan ksiąg, akt lub dokumentów.</div>
+          <div class="step"><strong>3. Wycena</strong>Ustalamy zakres, termin i sposób przekazania.</div>
+          <div class="step"><strong>4. Realizacja</strong>Renowacja, przygotowanie, skanowanie lub OCR.</div>
+          <div class="step"><strong>5. Odbiór</strong>Przekazujemy dokumenty i pliki cyfrowe.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <h2 class="section-title">Zapytaj o wycenę</h2>
+            <p>Napisz, jakie dokumenty chcesz zabezpieczyć lub zdigitalizować. Wystarczy orientacyjna liczba ksiąg, segregatorów albo stron.</p>
+          </div>
+          <div>
+            <p><strong>Telefon:</strong> wpisz numer telefonu</p>
+            <p><strong>E-mail:</strong> wpisz adres e-mail</p>
+            <p><strong>Lokalizacja:</strong> Lublin / woj. lubelskie</p>
+            <a class="button" href="mailto:kontakt@zagksiegi.pl?subject=Zapytanie%20o%20wycen%C4%99">Wyślij e-mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© ZAG Księgi. Renowacja, oprawa i digitalizacja ksiąg oraz dokumentów.</div>
+  </footer>
+</body>
+</html>
