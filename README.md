@@ -1,0 +1,1 @@
+# zagksiegi.pl
